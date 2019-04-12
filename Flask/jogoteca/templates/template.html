@@ -1,0 +1,32 @@
+<!--Arquivo de template das páginas-->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- flask gera a url dinâmica para o arquivo -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap.css') }}">
+    <title>Jogoteca</title>
+</head>
+
+<body>
+    <div class="container">
+        <!--Verifica se foi setada alguma variável no flask-->
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for message in messages %}
+                    <div class="alert alert-success">{{ message }}</div>
+                {% endfor %}
+            {% endif %} 
+        {% endwith %}
+        <div class="page-header">
+            <!--Diretiva para imprimir código dinâmico no html {{ código }}-->
+            <h1>{{ titulo }}</h1>
+        </div>
+        <!--Renderiza nessa parte do código o bloco com nome conteúdo-->
+        {% block conteudo %} {% endblock %}
+    </div>
+</body>
+
+</html>

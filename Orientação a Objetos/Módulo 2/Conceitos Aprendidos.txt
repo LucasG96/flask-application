@@ -1,0 +1,5 @@
+1 - Herança
+2 - Polimorfismo
+3 - Python Data Model o que seria como uma interface (Duck Typing)
+4 - ABC (Abastract base class)
+5 - Herança multipla

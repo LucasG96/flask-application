@@ -1,0 +1,2 @@
+1 - Arquivos HTML devem ser salvos na pasta templates, isso possibilita que o flask reconheça esses caras como views da aplicação
+2 - Arquivos CSS devem ser salvos na pasta stativ, isso possibilita que o flask reconheça esses cars como arquivos de estilo
